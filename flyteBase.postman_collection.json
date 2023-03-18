@@ -1,0 +1,1423 @@
+{
+  "info": {
+    "_postman_id": "07bacfee-8057-47b0-9d17-466991850a30",
+    "name": "flyteBase",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User-routes",
+      "item": [
+        {
+          "name": "ListUsers",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/userroute/listAllUsers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["userroute", "listAllUsers"]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415f040b75369826a12aeec",
+              "name": "Suyash Tilak",
+              "email": "tilaksuresh22@gmail.com",
+              "password": "$2b$10$cmaVBgLUkHit/9ZMNxW2/u.0fQmqDbVggJIWPX03UnydV/4B0M502",
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwNDBiNzUzNjk4MjZhMTJhZWVjIiwiZW1haWwiOiJ0aWxha3N1cmVzaDIyQGdtYWlsLmNvbSIsImlhdCI6MTY3OTE1OTM2MCwiZXhwIjoxNjc5MTcwMTYwfQ.Klki0WWRaRiI71CKQH-Lcgrdi0LtVFIL98rugfh4n74",
+              "__v": 0
+            },
+            {
+              "_id": "6415f0d1b75369826a12aeef",
+              "name": "Priya More",
+              "email": "morepriya11@gmail.com",
+              "password": "$2b$10$iolq/9P1xjBEeMDU2BD/xeCdNwGRaJsbS5e5oQUyqOe9kpJi.n3a6",
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "registerUser",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"Priya More\",\n    \"email\": \"morepriya11@gmail.com\",\n    \"password\":\"Priya@11\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/userroute/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["userroute", "register"]
+            }
+          },
+          "response": [
+            {
+              "user": {
+                "name": "Priya More",
+                "email": "morepriya11@gmail.com",
+                "password": "$2b$10$iolq/9P1xjBEeMDU2BD/xeCdNwGRaJsbS5e5oQUyqOe9kpJi.n3a6",
+                "_id": "6415f0d1b75369826a12aeef",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                "__v": 0
+              },
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNTM4ZTQ4ZGEzNDlhZjE3YTQ4YjI0IiwiZW1haWwiOiJ1c2VyMTFAZ21haWwuY29tIiwiaWF0IjoxNjc5MTEyNDIwLCJleHAiOjE2NzkxMTk2MjB9.YoZ9wTjTdkWJ9kF76E0-56TOUUMU4QVnqPyyIIHxhz4",
+                "type": "default",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"morepriya11@gmail.com\",\n    \"password\":\"Priya@12\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/userroute/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["userroute", "login"]
+            }
+          },
+          "response": [
+            {
+              "message": "Invalid Credentials"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Drone-routes",
+      "item": [
+        {
+          "name": "create-drone",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {}
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNTIyYWRjMzVmYzc0MDQxNzM5NjVjIiwiZW1haWwiOiJ1c2VyOEBnbWFpbC5jb20iLCJpYXQiOjE2NzkxMDY3MzMsImV4cCI6MTY3OTExMzkzM30.E4DzqBsCzMXj1UYMAC2PFZVmGjpcMn6Y6VHpGVdEdZE",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNTIyYWRjMzVmYzc0MDQxNzM5NjVjIiwiZW1haWwiOiJ1c2VyOEBnbWFpbC5jb20iLCJpYXQiOjE2NzkxMDY3MzMsImV4cCI6MTY3OTExMzkzM30.E4DzqBsCzMXj1UYMAC2PFZVmGjpcMn6Y6VHpGVdEdZE",
+                "type": "default",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": " {    \"name\" : \"a\",\n      \"droneType\":\"a\",\n      \"makeName\":\"a\",\n      \"createdBy\":\"641538e48da349af17a48b24\",\n      \"siteId\":\"a\",\n      \"category\":\"a\",\n      \"createdAt\": \"Date.now()\",\n      \"updatedAt\": \"Date.now()\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/droneroute/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["droneroute", "create"],
+              "query": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNTIyYWRjMzVmYzc0MDQxNzM5NjVjIiwiZW1haWwiOiJ1c2VyOEBnbWFpbC5jb20iLCJpYXQiOjE2NzkxMDY3MzMsImV4cCI6MTY3OTExMzkzM30.E4DzqBsCzMXj1UYMAC2PFZVmGjpcMn6Y6VHpGVdEdZE",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "createdAt": 1679165035188,
+              "droneType": "GPS Drone",
+              "makeName": "Walkera",
+              "name": "Walkera Scout X4",
+              "updatedAt": 1679165035188,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fbab38f37eb575aca50e",
+              "_id": "6416066b58a7f46883de0b04",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "list-drones",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/droneroute/getAll",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["droneroute", "getAll"]
+            }
+          },
+          "response": [
+            {
+              "_id": "641603ce58a7f46883de0b00",
+              "createdAt": 1679164366953,
+              "droneType": "Real Drone",
+              "makeName": "cloudsim",
+              "name": "Virtual Drone",
+              "updatedAt": 1679164366953,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fb8738f37eb575aca50c",
+              "__v": 0
+            },
+            {
+              "_id": "641605c958a7f46883de0b02",
+              "createdAt": 1679164873397,
+              "droneType": "GPS Drone",
+              "makeName": "DJI",
+              "name": "DJI Phantom 4",
+              "updatedAt": 1679164873397,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f98c38f37eb575aca503",
+              "category": "6415fbab38f37eb575aca50e",
+              "__v": 0
+            },
+            {
+              "_id": "6416066b58a7f46883de0b04",
+              "createdAt": 1679165035188,
+              "droneType": "GPS Drone",
+              "makeName": "Walkera",
+              "name": "Walkera Scout X4",
+              "updatedAt": 1679165035188,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fbab38f37eb575aca50e",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "delete-drone",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/droneroute/delete/64154b6f547f471e38c53decd",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["droneroute", "delete", "64154b6f547f471e38c53decd"],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "6415489e00f5f28cc7f3d05e",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "message": "Token not provided"
+            }
+          ]
+        },
+        {
+          "name": "get-drone-byid",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/droneroute/getDroneById/641603ce58a7f46883de0b00",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["droneroute", "getDroneById", "641603ce58a7f46883de0b00"]
+            }
+          },
+          "response": [
+            {
+              "_id": "641603ce58a7f46883de0b00",
+              "createdAt": 1679164366953,
+              "droneType": "Real Drone",
+              "makeName": "cloudsim",
+              "name": "Virtual Drone",
+              "updatedAt": 1679164366953,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fb8738f37eb575aca50c",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "update-drone",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{       \n        \"droneType\": \"book\",\n        \"name\": \"b2222\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/droneroute/update/64154b6f547f471e38c53dec",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["droneroute", "update", "64154b6f547f471e38c53dec"]
+            }
+          },
+          "response": [
+            {
+              "_id": "641603ce58a7f46883de0b00",
+              "createdAt": 1679164366953,
+              "droneType": "Real Drone",
+              "makeName": "CloudSim",
+              "name": "Virtual Drone",
+              "updatedAt": 1679165296882,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fb8738f37eb575aca50c",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "list-drones-by-category",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"category\":\"6415fbab38f37eb575aca50e\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/droneroute/getDronesByCategory",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["droneroute", "getDronesByCategory"]
+            }
+          },
+          "response": [
+            {
+              "_id": "641605c958a7f46883de0b02",
+              "createdAt": 1679164873397,
+              "droneType": "GPS Drone",
+              "makeName": "DJI",
+              "name": "DJI Phantom 4",
+              "updatedAt": 1679164873397,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f98c38f37eb575aca503",
+              "category": "6415fbab38f37eb575aca50e",
+              "__v": 0
+            },
+            {
+              "_id": "6416066b58a7f46883de0b04",
+              "createdAt": 1679165035188,
+              "droneType": "GPS Drone",
+              "makeName": "Walkera",
+              "name": "Walkera Scout X4",
+              "updatedAt": 1679165035188,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fbab38f37eb575aca50e",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "list-drones-by-site",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"siteId\":\"6415f98c38f37eb575aca503\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/droneroute/getDronesBySiteId",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["droneroute", "getDronesBySiteId"]
+            }
+          },
+          "response": [
+            {
+              "_id": "641605c958a7f46883de0b02",
+              "createdAt": 1679164873397,
+              "droneType": "GPS Drone",
+              "makeName": "DJI",
+              "name": "DJI Phantom 4",
+              "updatedAt": 1679164873397,
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "siteId": "6415f98c38f37eb575aca503",
+              "category": "6415fbab38f37eb575aca50e",
+              "__v": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Site-routes",
+      "item": [
+        {
+          "name": "create-site",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n      \"name\": \"Berlin\",\n        \"position\": {\n            \"latitude\":\"18.324645\",\n            \"longitude\":\"72.654621\"\n        },\n        \"createdBy\": \"6415f0d1b75369826a12aeef\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/siteroute/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["siteroute", "create"]
+            }
+          },
+          "response": [
+            {
+              "name": "Berlin",
+              "position": {
+                "latitude": "18.324645",
+                "longitude": "72.654621"
+              },
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "_id": "6415f99f38f37eb575aca505",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "list-sites",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/siteroute/getAll",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["siteroute", "getAll"]
+            }
+          },
+          "response": [
+            {
+              "position": {
+                "latitude": "18.324640",
+                "longitude": "72.654620"
+              },
+              "_id": "6415f98c38f37eb575aca503",
+              "name": "Zimbabve",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "__v": 0
+            },
+            {
+              "position": {
+                "latitude": "18.324645",
+                "longitude": "72.654621"
+              },
+              "_id": "6415f99f38f37eb575aca505",
+              "name": "Berlin",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "get-site-byid",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/siteroute/getSiteById/6415f98c38f37eb575aca503",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["siteroute", "getSiteById", "6415f98c38f37eb575aca503"]
+            }
+          },
+          "response": [
+            {
+              "position": {
+                "latitude": "18.324640",
+                "longitude": "72.654620"
+              },
+              "_id": "6415f98c38f37eb575aca503",
+              "name": "Zimbabve",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "update-site",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"position\": {\n        \"latitude\": \"18.324640\",\n        \"longitude\": \"72.654620\"\n    },\n    \"name\": \"London\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/siteroute/update/6415f98c38f37eb575aca503",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["siteroute", "update", "6415f98c38f37eb575aca503"]
+            }
+          },
+          "response": [
+            {
+              "position": {
+                "latitude": "18.324640",
+                "longitude": "72.654620"
+              },
+              "_id": "6415f98c38f37eb575aca503",
+              "name": "London",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "delete-site",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/siteroute/delete/6415f8a938f37eb575aca4ff",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["siteroute", "delete", "6415f8a938f37eb575aca4ff"]
+            }
+          },
+          "response": [
+            {
+              "position": {
+                "latitude": "18.324644",
+                "longitude": "72.654622"
+              },
+              "_id": "6415f8a938f37eb575aca4ff",
+              "name": "Berlin",
+              "createdBy": "641538e48da349af17a48b24",
+              "__v": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Category-routes",
+      "item": [
+        {
+          "name": "create-catogory",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Survey\",\n    \"color\": \"#407BE5\",\n    \"tag_name\": \"test07\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/categoryroute/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["categoryroute", "create"]
+            }
+          },
+          "response": [
+            {
+              "name": "Survey",
+              "color": "#407BE5",
+              "createdAt": 1679162318887,
+              "updatedAt": 1679162318887,
+              "_id": "6415fbce38f37eb575aca511",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "list-categories",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/categoryroute/getAll",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["categoryroute", "getAll"]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fb8738f37eb575aca50c",
+              "name": "Grid",
+              "color": "#407BE3",
+              "createdAt": 1679162247612,
+              "updatedAt": 1679162247612,
+              "__v": 0
+            },
+            {
+              "_id": "6415fbab38f37eb575aca50e",
+              "name": "Corridor",
+              "color": "#407BE4",
+              "createdAt": 1679162283687,
+              "updatedAt": 1679162283687,
+              "__v": 0
+            },
+            {
+              "_id": "6415fbce38f37eb575aca511",
+              "name": "Survey",
+              "color": "#407BE5",
+              "createdAt": 1679162318887,
+              "updatedAt": 1679162318887,
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "get-category-byid",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/categoryroute/getCategoryById/6415fb8738f37eb575aca50c",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": [
+                "categoryroute",
+                "getCategoryById",
+                "6415fb8738f37eb575aca50c"
+              ]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fb8738f37eb575aca50c",
+              "name": "Grid",
+              "color": "#407BE3",
+              "createdAt": 1679162247612,
+              "updatedAt": 1679162247612,
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "update-category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"color\": \"#507BZ3\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/categoryroute/update/6415fb8738f37eb575aca50c",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["categoryroute", "update", "6415fb8738f37eb575aca50c"]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fb8738f37eb575aca50c",
+              "name": "Grid",
+              "color": "#507BZ3",
+              "createdAt": 1679162247612,
+              "updatedAt": 1679162247612,
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "delete-category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/categoryroute/delete/6415fbce38f37eb575aca511",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["categoryroute", "delete", "6415fbce38f37eb575aca511"]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fbce38f37eb575aca511",
+              "name": "Survey",
+              "color": "#407BE5",
+              "createdAt": 1679162318887,
+              "updatedAt": 1679162318887,
+              "__v": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mission-routes",
+      "item": [
+        {
+          "name": "create-mission",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"alt\": 60,\n    \"speed\": 19,\n    \"name\": \"mission_3\",\n    \"waypoints\": [\n        {\n            \"alt\": 40,\n            \"lat\": 37.42987269786579,\n            \"lng\": -122.08320293735657\n        },\n        {\n            \"alt\": 40,\n            \"lat\": 37.42987269786579,\n            \"lng\": -122.0832029373565\n        },\n        {\n            \"alt\": 40,\n            \"lat\": 37.42987269786578,\n            \"lng\": -122.08320293735657\n        }\n    ],\n    \"siteId\": \"6415f98c38f37eb575aca503\",\n    \"category\": \"6415fbab38f37eb575aca50e\",\n    \"createdBy\": \"6415f0d1b75369826a12aeef\",\n    \"isRunnable\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/missionroute/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["missionroute", "create"]
+            }
+          },
+          "response": [
+            {
+              "alt": 60,
+              "speed": 19,
+              "name": "mission_3",
+              "waypoints": [
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6416013458a7f46883de0aef"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6416013458a7f46883de0af0"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786578,
+                  "_id": "6416013458a7f46883de0af1"
+                }
+              ],
+              "createdAt": 1679163700614,
+              "updatedAt": 1679163700614,
+              "siteId": "6415f98c38f37eb575aca503",
+              "category": "6415fbab38f37eb575aca50e",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "_id": "6416013458a7f46883de0aee",
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "list-missions",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwNDBiNzUzNjk4MjZhMTJhZWVjIiwiZW1haWwiOiJ0aWxha3N1cmVzaDIyQGdtYWlsLmNvbSIsImlhdCI6MTY3OTE1OTM2MCwiZXhwIjoxNjc5MTcwMTYwfQ.Klki0WWRaRiI71CKQH-Lcgrdi0LtVFIL98rugfh4n74",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/missionroute/listAll",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["missionroute", "listAll"]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fd2838f37eb575aca517",
+              "alt": 50,
+              "speed": 10,
+              "name": "mission_1",
+              "waypoints": [
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd2838f37eb575aca518"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd2838f37eb575aca519"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786578,
+                  "_id": "6415fd2838f37eb575aca51a"
+                }
+              ],
+              "createdAt": 1679162664169,
+              "updatedAt": 1679162664169,
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fb8738f37eb575aca50c",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            },
+            {
+              "_id": "6415fd8438f37eb575aca51c",
+              "alt": 50,
+              "speed": 10,
+              "name": "mission_2",
+              "waypoints": [
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd8438f37eb575aca51d"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd8438f37eb575aca51e"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786578,
+                  "_id": "6415fd8438f37eb575aca51f"
+                }
+              ],
+              "createdAt": 1679162756460,
+              "updatedAt": 1679162756460,
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fbab38f37eb575aca50e",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            },
+            {
+              "_id": "6415fe0a38f37eb575aca521",
+              "alt": 60,
+              "speed": 19,
+              "name": "mission_3",
+              "waypoints": [
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fe0a38f37eb575aca522"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fe0a38f37eb575aca523"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786578,
+                  "_id": "6415fe0a38f37eb575aca524"
+                }
+              ],
+              "createdAt": 1679162890673,
+              "updatedAt": 1679162890673,
+              "siteId": "6415f98c38f37eb575aca503",
+              "category": "6415fbab38f37eb575aca50e",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "get-mission-byid",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/missionroute/getMissionById/6415fe0a38f37eb575aca521",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": [
+                "missionroute",
+                "getMissionById",
+                "6415fe0a38f37eb575aca521"
+              ]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fe0a38f37eb575aca521",
+              "alt": 60,
+              "speed": 19,
+              "name": "mission_3",
+              "waypoints": [
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fe0a38f37eb575aca522"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fe0a38f37eb575aca523"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786578,
+                  "_id": "6415fe0a38f37eb575aca524"
+                }
+              ],
+              "createdAt": 1679162890673,
+              "updatedAt": 1679162890673,
+              "siteId": "6415f98c38f37eb575aca503",
+              "category": "6415fbab38f37eb575aca50e",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "update-mission",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"alt\": 70,\n    \"speed\": 25,\n    \"waypoints\": [\n            {\n                \"alt\": 10,\n                \"lat\": 40.42987269786579,\n                \"_id\": \"6415fe0a38f37eb575aca522\"\n            },\n            {\n                \"alt\": 20,\n                \"lat\": 41.42987269786579,\n                \"_id\": \"6415fe0a38f37eb575aca523\"\n            },\n            {\n                \"alt\": 30,\n                \"lat\": 42.4298727566578,\n                \"_id\": \"6415fe0a38f37eb575aca524\"\n            }\n        ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/missionroute/update/6415fe0a38f37eb575aca521",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["missionroute", "update", "6415fe0a38f37eb575aca521"]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fe0a38f37eb575aca521",
+              "alt": 70,
+              "speed": 25,
+              "name": "mission_3",
+              "waypoints": [
+                {
+                  "alt": 10,
+                  "lat": 40.42987269786579,
+                  "_id": "6415fe0a38f37eb575aca522"
+                },
+                {
+                  "alt": 20,
+                  "lat": 41.42987269786579,
+                  "_id": "6415fe0a38f37eb575aca523"
+                },
+                {
+                  "alt": 30,
+                  "lat": 42.4298727566578,
+                  "_id": "6415fe0a38f37eb575aca524"
+                }
+              ],
+              "createdAt": 1679162890673,
+              "updatedAt": 1679163979932,
+              "siteId": "6415f98c38f37eb575aca503",
+              "category": "6415fbab38f37eb575aca50e",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "delete-mission",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:1338/missionroute/delete/64159daf15b0396966be9497",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["missionroute", "delete", "64159daf15b0396966be9497"]
+            }
+          },
+          "response": [
+            {
+              "message": "mission with id not found"
+            }
+          ]
+        },
+        {
+          "name": "list-missions-by-siteId",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"siteId\":\"6415f99f38f37eb575aca505\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/missionroute/getMissionsBySiteId",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["missionroute", "getMissionsBySiteId"]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fd2838f37eb575aca517",
+              "alt": 50,
+              "speed": 10,
+              "name": "mission_1",
+              "waypoints": [
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd2838f37eb575aca518"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd2838f37eb575aca519"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786578,
+                  "_id": "6415fd2838f37eb575aca51a"
+                }
+              ],
+              "createdAt": 1679162664169,
+              "updatedAt": 1679162664169,
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fb8738f37eb575aca50c",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            },
+            {
+              "_id": "6415fd8438f37eb575aca51c",
+              "alt": 50,
+              "speed": 10,
+              "name": "mission_2",
+              "waypoints": [
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd8438f37eb575aca51d"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd8438f37eb575aca51e"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786578,
+                  "_id": "6415fd8438f37eb575aca51f"
+                }
+              ],
+              "createdAt": 1679162756460,
+              "updatedAt": 1679162756460,
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fbab38f37eb575aca50e",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            }
+          ]
+        },
+        {
+          "name": "list-missions-by-categoryId",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQxNWYwZDFiNzUzNjk4MjZhMTJhZWVmIiwiZW1haWwiOiJtb3JlcHJpeWExMUBnbWFpbC5jb20iLCJpYXQiOjE2NzkxNTk1MDUsImV4cCI6MTY3OTE3MDMwNX0.DHEMq42yO8UpGL7BiENOQV8zi9_odnt4J1O_G_R22XQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"category\":\"6415fbab38f37eb575aca50e\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:1338/missionroute/getMissionsByCategoryId",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "1338",
+              "path": ["missionroute", "getMissionsByCategoryId"]
+            }
+          },
+          "response": [
+            {
+              "_id": "6415fd8438f37eb575aca51c",
+              "alt": 50,
+              "speed": 10,
+              "name": "mission_2",
+              "waypoints": [
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd8438f37eb575aca51d"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786579,
+                  "_id": "6415fd8438f37eb575aca51e"
+                },
+                {
+                  "alt": 40,
+                  "lat": 37.42987269786578,
+                  "_id": "6415fd8438f37eb575aca51f"
+                }
+              ],
+              "createdAt": 1679162756460,
+              "updatedAt": 1679162756460,
+              "siteId": "6415f99f38f37eb575aca505",
+              "category": "6415fbab38f37eb575aca50e",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            },
+            {
+              "_id": "6415fe0a38f37eb575aca521",
+              "alt": 70,
+              "speed": 25,
+              "name": "mission_3",
+              "waypoints": [
+                {
+                  "alt": 10,
+                  "lat": 40.42987269786579,
+                  "_id": "6415fe0a38f37eb575aca522"
+                },
+                {
+                  "alt": 20,
+                  "lat": 41.42987269786579,
+                  "_id": "6415fe0a38f37eb575aca523"
+                },
+                {
+                  "alt": 30,
+                  "lat": 42.4298727566578,
+                  "_id": "6415fe0a38f37eb575aca524"
+                }
+              ],
+              "createdAt": 1679162890673,
+              "updatedAt": 1679163979932,
+              "siteId": "6415f98c38f37eb575aca503",
+              "category": "6415fbab38f37eb575aca50e",
+              "createdBy": "6415f0d1b75369826a12aeef",
+              "isRunnable": false,
+              "__v": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
