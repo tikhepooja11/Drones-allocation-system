@@ -1,6 +1,6 @@
 
 Hello Pooja here...! 
-  I have completed the assignment as per the requirements, I am Also attaching POSTMAN API collection (json file) with project files only.
+  I am attaching POSTMAN API collection (json file) with project files.
   
 Technologies Used -> 
 1. Using MVC architecture for code seperation (DB config -> routes -> services -> repository -> model)
